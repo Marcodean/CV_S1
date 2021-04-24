@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: 100%;
+    display: flex;
+    
+}
+
+.container section{
+    min-width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fffee1;
+}
+#section-1{
+    min-width: 500px;
+    align-items: center;
+    height: 100vh;
+    background: #fffee1;
+    overflow: hidden;
+	overflow-y:scroll;
+}
+.container section:nth-child(2){
+    background: #e2fcff;
+}
+.container section:nth-child(3){
+    background: #d0eaff;
+}
+.container section:nth-child(4){
+    background: #fce8f4;
+}
+.container section .content{
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+}
+
+@media (max-width: 991px){
+    .container{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+
+}
+
+/**MENU CONTAINER**/
+
+.menu-container{
+    width:200px;
+	background-color: #222;
+	position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+	height: 100%;
+    text-align: center;
+}
+#logo-menu{
+	padding-top: 20px;
+}
+#logo-name{
+	color: #eee;
+	font-size: 14px;
+	padding-top: 10px;
+}
+#logo-desc{
+	color: #bbb;
+	font-size:11px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+#menu{
+	margin:0;
+	padding: 40px 0 40px 0;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #444;
+	/*#444 
+	  padding de 40px*/
+}
+#menu li{
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+	/* padding de 10px */
+}
+#menu li a{
+	color:#FCB95B;
+	text-decoration: none;
+	/*#FCB95B*/
+}
+#menu li a:hover{
+	color:#F5DFCE;
+	transition: color 0.3s;
+	/*#F5DFCE*/
+}
+
+/**TAMAÑO ORIGINAL EN MOVIL**/
+@media only screen and (max-width: 600px){
+    .container{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+    }
+}
+/**DESAPARECE EL MENU CONTAINER**/
+@media only screen and (max-width: 600px) {
+    .goto {
+        display: none;
+    }
+}
